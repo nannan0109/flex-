@@ -1,10 +1,7 @@
-[TOC]
 # flex笔记——参考阮一峰的博客<br/>
 ## 0.参考链接
-[阮一峰的网络日志——flex布局语法篇][1]
-[阮一峰的网络日志——flex布局实例篇][2]
-[1]:http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool
-[2]:http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+[阮一峰的网络日志——flex布局语法篇]<http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool><br/>
+[阮一峰的网络日志——flex布局实例篇]<http://www.ruanyifeng.com/blog/2015/07/flex-examples.html>
 ## 1.什么元素可以使用flex?
 任何一个容器都可以指定为flex布局
 行内元素也可以使用flex布局
