@@ -20,7 +20,7 @@ ps:设置为flex布局后，子元素的float,clear,vertical-align属性将会�
 * align-items
 * align-content
 ### 3.1 flex-direction
-决定主轴的方向（项目的排列方向）
+决定主轴的方向（项目的排列方向）<br/>
 ```
 .box{
 	flex-direction:row	→
@@ -36,134 +36,153 @@ ps:设置为flex布局后，子元素的float,clear,vertical-align属性将会�
 }
 ```
 ### 3.2 flex-wrap
-默认情况下，项目都排在一条线上，flex-wrap属性定义，如果一条轴线排不下，如何换行。
-默认不换行：
+默认情况下，项目都排在一条线上，flex-wrap属性定义，如果一条轴线排不下，如何换行。<br/>
+默认不换行：<br/>
 `
 .box{
 	flex-wrap:nowrap
 }
 `
-换行，第一行在上方：
+<br/>
+换行，第一行在上方：<br/>
 `
 .box{
 	flex-wrap:wrap
 }
 `
-换行，第一行在下方：
+<br/>
+换行，第一行在下方：<br/>
 `
 .box{
 	flex-wrap:wrap-reverse
 }
 `
+<br/>
 ### 3.3 flex-flow
-是flex-direction属性和flex-wrap属性的简写方式，默认值为row nowrap
+是flex-direction属性和flex-wrap属性的简写方式，默认值为row nowrap<br/>
 `
 .box{
 	flex-flow:row || nowrap
 }
 `
+<br/>
 ### 3.4 justify-content
-定义了项目在主轴上的对齐方式
-左对齐：
+定义了项目在主轴上的对齐方式<br/>
+左对齐：<br/>
 `
 .box{
 	justify-content:flex-start
 }
 `
-右对齐：
+<br/>
+右对齐：<br/>
 `
 .box{
 	justify-content:flex-end
 }
 `
-居中：
+<br/>
+居中：<br/>
 `
 .box{
 	justify-content:center
 }
 `
-两端对齐：项目之间的间隙都相等：
+<br/>
+两端对齐：项目之间的间隙都相等：<br/>
 `
 .box{
 	justify-content:space-between
 }
 `
-每个项目两侧的间隔相等。项目之间的间隔比项目与边框的间隔大一倍。
+<br/>
+每个项目两侧的间隔相等。项目之间的间隔比项目与边框的间隔大一倍。<br/>
 `
 .box{
 	justify-content:space-around
 }
 `
+<br/>
 ### 3.5 align-items
-定义在交叉轴（竖轴）上如何对齐
-起点对齐：都从上往下走
+定义在交叉轴（竖轴）上如何对齐<br/><br/>
+起点对齐：都从上往下走<br/>
 `
 .box{
 	align-items:flex-start
 }
 `
-终点对齐：从下往上走
+<br/>
+终点对齐：从下往上走<br/>
 `
 .box{
 	align-items:flex-end
 }
 `
-中点对齐：都居中
+<br/>
+中点对齐：都居中<br/>
 `
 .box{
 	align-items:center
 }
 `
-项目的第一行文字的基线对齐：
+<br/>
+项目的第一行文字的基线对齐：<br/>
 `
 .box{
 	align-items:baseline
 }
 `
-默认值，占满整个容器的高度：
+<br/>
+默认值，占满整个容器的高度：<br/>
 `
 .box{
 	align-items:stretch
 }
 `
 ### 3.6 align-content
-定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
-与交叉轴的起点对齐：
+定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。<br/>
+与交叉轴的起点对齐：<br/>
 `
 .box{
 	align-content:flex-start
 }
 `
-与交叉轴的终点对齐：
+<br/>
+与交叉轴的终点对齐：<br/>
 `
 .box{
 	align-content:flex-end
 }
 `
-与交叉轴的中点对齐：
+<br/>
+与交叉轴的中点对齐：<br/>
 `
 .box{
 	align-content:center
 }
 `
-与交叉轴两端对齐，轴线之间的间隔平均分布：
+<br/>
+与交叉轴两端对齐，轴线之间的间隔平均分布：<br/>
 `
 .box{
 	align-content:space-between
 }
 `
-每根轴线两侧的间隔都相等：
+<br/>
+每根轴线两侧的间隔都相等：<br/>
 `
 .box{
 	align-content:space-around
 }
 `
-轴线占满整个交叉轴（默认值）：
+<br/>
+轴线占满整个交叉轴（默认值）：<br/>
 `
 .box{
 	align-content:stretch
 }
 `
+<br/>
 ## 4 项目的6个属性：
 * order
 * flex-grow
@@ -172,56 +191,60 @@ ps:设置为flex布局后，子元素的float,clear,vertical-align属性将会�
 * flex
 * align-self
 ### 4.1 order
-定义项目的排列顺序，数值越小，排列越靠前，默认为0（可以为负值）
+定义项目的排列顺序，数值越小，排列越靠前，默认为0（可以为负值）<br/>
 `
 .item{
 	order:0
 }
 `
 ### 4.2 flex-grow
-定义项目的放大比例，默认为0，如果存在剩余空间，也不放大
+定义项目的放大比例，默认为0，如果存在剩余空间，也不放大<br/>
 `
 .item{
 	flex-grow:1
 }
 `
+<br/>
 如果所有项目的flex-grow属性都为1，则它们将等分剩余空间，如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
 ### 4.3 flex-shrink
-定义了项目的缩小比例，默认为1，如果空间不足，该项目将缩小。
+定义了项目的缩小比例，默认为1，如果空间不足，该项目将缩小。<br/>
 `
 .item{
 	flex-shrink:1
 }
 `
-如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。
-如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。
+<br/>
+如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。<br/>
+如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。<br/>
 ### 4.4 flex-basis
-flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。
-浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。<br/>
+浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。<br/>
 `
 .item{
 	flex-basis:350px|auto
 }
 `
+<br/>
 ### 4.5 flex
-flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
-该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
+flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。<br/>
+该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br/>
 ### 4.6 align-self
-align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。
-默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。<br/>
+默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。<br/>
 `
 .item {
   align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
 `
-该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
+<br/>
+该属性可能取6个值，除了auto，其他都与align-items属性完全一致。<br/>
 ***
 ## 5.基本网格布局
 最简单的网格布局，就是平均分布。在容器里面平均分配空间。跟骰子布局很像，但是需要设置项目的自动缩放。<br/>
 ## 6.百分比布局
 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。
 ## 7.圣杯布局
-圣杯布局是一种最常见的网站布局。页面从上倒下，分为三个部分，头部（header），躯干（body）,尾部（footer）。
+圣杯布局是一种最常见的网站布局。页面从上倒下，分为三个部分，头部（header），躯干（body）,尾部（footer）。<br/>
 其中躯干分为三栏：从左到右为：导航、主栏、副栏。
 ## 8.输入框布局
 在输入框前方添加提示，后方添加按钮
