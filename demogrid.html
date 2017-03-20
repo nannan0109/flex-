@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>网格布局</title>
+	<style type="text/css">
+		.Grid{
+			display: flex;
+		}
+		.Grid-cell{
+			flex:1;
+			background-color: #ccc;
+			height: 100px;
+			border:1px solid #fff;
+		}
+		.Grid1{
+			display: flex;
+		}
+		.Grid1 .Grid-cell:nth-child(1){
+			flex:2;
+		}
+		.Grid2{
+			display: flex;
+		}
+		.Grid2 .Grid-cell{
+			flex:1;
+		}
+		.Grid2 .Grid-cell.u-full{
+			flex:0 0 100%;
+		}
+		.Grid2 .Grid-cell.u-lof2{
+			flex:0 0 50%;
+		}
+		.Grid2 .Grid-cell.u-lof3{
+			flex:0 0 33.3333%;
+			height: 100px;
+			background-color: #ccc;
+			border: 1px solid #fff;
+		}
+		.Grid2 .Grid-cell.u-lof4{
+			flex:0 0 25%;
+			height: 100px;
+			background-color: #ccc;
+			border: 1px solid #fff;
+		}
+
+		.HolyGrail{
+			display: flex;
+			min-height: 100vh;
+			flex-direction:column;
+		}
+		header,footer{
+			flex:1;
+			height: 60px;
+			background-color: #acc;
+		}
+		.HolyGrail-body{
+			display: flex;
+			flex:1;
+			height: 200px;
+			background-color: pink;
+		}
+		.HolyGrail-content{
+			flex:1;
+			border:1px solid #fff;
+		}
+		.HolyGrail-nav,.HolyGrail-ads{
+			/*两个栏的宽度设为12em*/
+			flex:0 0 12em;
+			border:1px solid #fff;
+		}
+		.HolyGrail-nav{
+			/*导航放到最左边*/
+			order:-1;
+		}
+		/*小于768px的时候，内容部分改为垂直排列3个部分*/
+		@media(max-width:768px){
+			.HolyGrail-body{
+				flex-direction:column;
+				flex:1;
+
+			}
+			.HolyGrail-nav,
+			.HolyGrail-ads,
+			.HolyGrail-content{
+				flex:auto;
+			}
+		}
+		.InputAddOn{
+			display: flex;
+			background-color: green;
+			height: 50px;
+		}
+		.InputAddOn-field{
+			flex:1;
+			border: 1px solid #000;
+		}
+		.Media{
+			display: flex;
+			align-items:flex-start;
+			background-color: #cca;
+		}
+		.Media-figure{
+			margin-right: 1em;
+			height: 50px;
+			width: 60px;
+		}
+		.Media-body{
+			flex:1;
+			height: 100px;
+		}
+		.Site{
+			display: flex;
+			min-height: 10vh;
+			flex-direction:column;
+			background-color: red;
+		}
+		.Site-content{
+			flex:1;
+		}
+		.parent{
+			width: 200px;
+			height: 150px;
+			background-color: black;
+			display: flex;
+			flex-flow:row wrap;
+			align-content:flex-start;
+		}
+		.child{
+			box-sizing:border-box;
+			background-color: white;
+			flex:0 0 25%;
+			height: 50px;
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="Grid">
+	<!-- 容器内的几个项目的flex值都为1的话，则平分该容器 -->
+		<div class="Grid-cell"></div>
+		<div class="Grid-cell"></div>
+		<div class="Grid-cell"></div>
+		<div class="Grid-cell"></div>
+	</div>
+
+	<div class="Grid1">
+	<!-- 容器内的第一个项目占百分之40，剩下的每个项目占百分之20 -->
+		<div class="Grid-cell"></div>
+		<div class="Grid-cell"></div>
+		<div class="Grid-cell"></div>
+		<div class="Grid-cell"></div>
+	</div>
+
+	<!-- 百分比布局 -->
+	<div class="Grid2">
+		<div class="Grid-cell u-lof4"></div>
+		<div class="Grid-cell"></div>
+		<div class="Grid-cell u-lof3"></div>
+	</div>
+
+	<!-- 圣杯布局 -->
+	<div class="HolyGrail">
+		<header></header>
+		<div class="HolyGrail-body">
+			<main class="HolyGrail-content"></main>
+			<nav class="HolyGrail-nav"></nav>
+			<aside class="HolyGrail-ads"></aside>
+		</div>
+		<footer></footer>
+	</div>
+
+	<!-- 输入框布局 -->
+	<div class="InputAddOn">
+		<span class="InputAddOn-item">111</span>
+		<input class="InputAddOn-field">
+		<button class="InputAddOn-item" value="submit"></button>
+	</div>
+	<!-- 悬挂式布局 -->
+	<div class="Media">
+		<img class="Media-figure" src="wolf.jpg" alt="图片" />
+		<p class="Media-body">
+			我的小鱼你醒了，还认识早晨吗？昨夜你曾经说，愿夜幕永不开启。
+		</p>
+	</div>
+	<!-- 固定的底栏 -->
+	<div class="Site">
+		<div id="header"></div>
+		<main class="Site-content"></main>
+		<div id="footer"></div>
+	</div>
+	<!-- 流式布局 -->
+	<div class="parent">
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+	</div>
+</body>
+</html>

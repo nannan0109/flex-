@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex demo</title>
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+	<style type="text/css">
+	body{
+		display: flex;
+		justify-content:flex-start;
+		flex-wrap:wrap;
+	}
+		span{
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			background-color: #000;
+		}
+		div:not(.column){
+			width: 150px;
+			height: 150px;
+			border: 1px solid pink;
+			background-color: yellow;
+		}
+		/*一个项目左上角*/
+		.box{
+			display: flex;
+		}
+
+		/*一个项目在上面居中*/
+		.box11{
+			display: flex;
+			justify-content:center;
+		}
+		.box12{
+			display: flex;
+			justify-content:flex-end;
+		}
+		.box13{
+			display: flex;
+			align-items:center;
+		}
+		.box14{
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+		.box15{
+			display: flex;
+			justify-content:center;
+			align-items:flex-end;
+		}
+		.box16{
+			display: flex;
+			justify-content:flex-end;
+			align-items:flex-end;
+		}
+		.box21{
+			display: flex;
+			justify-content:space-between;
+		}
+		.box22{
+			display: flex;
+			justify-content:space-between;
+			align-items:center;
+		}
+		.box23{
+			display: flex;
+			flex-direction:column;
+			justify-content:space-between;
+		}
+		.box24{
+			display: flex;
+			flex-direction:column;
+			justify-content:space-between;
+			align-items:center;
+		}
+		.box25{
+			display: flex;
+			flex-direction:column;
+			justify-content:space-between;
+			align-items:flex-end;
+		}
+		.box26{
+			display: flex;
+		}
+		.item32{
+			align-self:center;
+		}
+		.box27{
+			display: flex;
+			justify-content:space-between;
+		}
+		.item34{
+			align-self:flex-end;
+		}
+		.box31{
+			display: flex;
+			justify-content:space-between;
+		}
+		.item332{
+			align-self:center;
+		}
+		.item333{
+			align-self:flex-end;
+		}
+		.box41{
+			display: flex;
+			flex-wrap:wrap;
+			justify-content:space-between;
+		}
+		.item44{
+			align-self:flex-end;
+		}
+		.box42{
+			display: flex;
+			flex-wrap:wrap;
+			align-content:space-between;
+		}
+		.column{
+			flex-basis:100%;
+			display: flex;
+			justify-content:space-between;
+		}
+		.box61{
+			display: flex;
+			flex-wrap:wrap;
+			align-content:space-between;
+		}
+		.box62{
+			display: flex;
+			flex-wrap:wrap;
+			flex-direction:column;
+			align-content:space-between;
+		}
+		.box63{
+
+		}
+		.box91{
+			display: flex;
+			flex-wrap:wrap;
+		}
+	</style>
+</head>
+<body>
+<!-- 定义flex容器 -->
+	<div class="box">
+	<!-- 定义flex容器中的项目 容器上左角一个项目-->
+		<span class="item"></span>
+	</div>
+
+<!-- 一个项目在上面居中 -->
+	<div class="box11">
+	<!-- 定义flex容器中的项目 容器上中角一个项目-->
+		<span class="item11"></span>
+	</div>
+
+	<!-- 一个项目在右上角 -->
+	<div class="box12">
+	<!-- 定义flex容器中的项目 容器上中角一个项目-->
+		<span class="item12"></span>
+	</div>
+
+	<!-- 一个项目在4 -->
+	<div class="box13">
+	<!-- 定义flex容器中的项目 容器上中角一个项目-->
+		<span class="item13"></span>
+	</div>
+
+	<!-- 一个项目在5,即垂直居中 -->
+	<div class="box14">
+	<!-- 定义flex容器中的项目 容器上中角一个项目-->
+		<span class="item14"></span>
+	</div>
+
+	<!-- 一个项目在8 -->
+	<div class="box15">
+	<!-- 定义flex容器中的项目 容器上中角一个项目-->
+		<span class="item15"></span>
+	</div>
+
+	<!-- 一个项目在9，即右下角 -->
+	<div class="box16">
+	<!-- 定义flex容器中的项目 容器上中角一个项目-->
+		<span class="item16"></span>
+	</div>
+
+	<!-- 两个项目 在1,3位置-->
+	<div class="box21">
+		<span class="item21"></span>
+		<span class="item22"></span>
+	</div>
+	<!-- 两个项目，在4，6位置 -->
+	<div class="box22">
+		<span class="item23"></span>
+		<span class="item24"></span>
+	</div>
+<!-- 两个项目，在1，7位置 -->
+	<div class="box23">
+		<span class="item25"></span>
+		<span class="item26"></span>
+	</div>
+	<!-- 两个项目，在2，8位置 -->
+	<div class="box24">
+		<span class="item27"></span>
+		<span class="item28"></span>
+	</div>
+
+	<!-- 两个项目，在3，9位置 -->
+	<div class="box25">
+		<span class="item29"></span>
+		<span class="item30"></span>
+	</div>
+
+	<!-- 两个项目，在1，5位置 -->
+	<div class="box26">
+		<span class="item31"></span>
+		<span class="item32"></span>
+	</div>
+
+	<!-- 两个项目，在1，9位置 -->
+	<div class="box27">
+		<span class="item33"></span>
+		<span class="item34"></span>
+	</div>
+
+	<!-- 三个项目，在1,5,9，即对角线位置 -->
+	<div class="box31">
+		<span class="item331"></span>
+		<span class="item332"></span>
+		<span class="item333"></span>
+	</div>
+
+	<!-- 四个项目，在1，2，3，9位置 -->
+	<div class="box41">
+		<span class="item41"></span>
+		<span class="item42"></span>
+		<span class="item43"></span>
+		<span class="item44"></span>
+		
+	</div>
+
+	<!-- 四个项目在四角 -->
+	<div class="box42">
+		<div class="column">
+			<span class="item45"></span>
+			<span class="item46"></span>
+		</div>
+		<div class="column">
+			<span class="item47"></span>
+			<span class="item48"></span>
+		</div>
+	</div>
+
+	<!-- 六个项目上下各3个 -->
+	<div class="box61">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!-- 六个项目左右各3个 -->
+	<div class="box62">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!-- 1,2,3,5,7,9 -->
+	<!-- <div class="box63">
+		<div class="row">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="row">
+			<span></span>
+		</div>
+		<div class="row">
+			<span></span>
+			<span></span>
+		</div>
+	</div> -->
+	<!-- 9项目 -->
+	<div class="box91">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+</body>
+</html>
